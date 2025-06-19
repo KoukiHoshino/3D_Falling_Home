@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:engine="UnityEngine.UIElements">
+    <!-- スタイルシートの読み込み -->
+    <ui:Style src="USS/HomeScene.uss" />
+
+    <!-- メインメニューパネル -->
+    <ui:VisualElement name="MainMenuPanel" class="panel">
+        <ui:Label text="3D Falling" class="title" />
+        <ui:VisualElement class="menu-button-container">
+            <ui:Button name="StartButton" text="START GAME" class="menu-button" />
+            <ui:Button name="HowToPlayButton" text="HOW TO PLAY" class="menu-button" />
+            <ui:Button name="SettingsButton" text="SETTINGS" class="menu-button" />
+            <ui:Button name="QuitButton" text="QUIT" class="menu-button" />
+        </ui:VisualElement> 
+    </ui:VisualElement>
+    
+    <!-- 遊び方パネル -->
+    <ui:VisualElement name="HowToPlayPanel" class="panel sub-panel">
+        <ui:Label text="HOW TO PLAY" class="sub-title" />
+        <ui:Label text="1. プロンプトを入力して3Dモデルを生成します。" class="description-text" />
+        <ui:Label text="2. WASDキーでモデルを移動、Shift+WASDで回転させます。" class="description-text" />
+        <ui:Label text="3. Spaceキーでモデルを落下させ、積み上げます。" class="description-text" />
+        <ui:Label text="4. モデルがステージから落ちるとゲームオーバーです。" class="description-text" />
+        <ui:Button name="HowToPlayBackButton" text="BACK" class="menu-button back-button" />
+    </ui:VisualElement>
+    
+    <!-- 設定パネル -->
+    <ui:VisualElement name="SettingsPanel" class="panel sub-panel">
+        <ui:Label text="SETTINGS" class="sub-title" />
+        <ui:Label text="（ここに音量設定などを追加します）" class="description-text" />
+        <ui:Button name="SettingsBackButton" text="BACK" class="menu-button back-button" />
+    </ui:VisualElement>
+</ui:UXML>
