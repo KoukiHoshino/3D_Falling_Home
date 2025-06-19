@@ -6,16 +6,54 @@
     background-color: rgb(17, 24, 39); /* ダークブルーグレー */
 }
 
-/* タイトルテキスト */ 
+/* タイトルテキスト */
 .title {
     -unity-font-style: bold;
     font-size: 80px;
     color: rgb(224, 242, 254); /* ライトシアン */
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgb(56, 189, 248); /* スカイブルー */
-    /* UnityのUSSは複数のtext-shadowをサポートしていないため、最も効果の大きいものを一つ適用します */
     text-shadow: 0 0 20px rgb(56, 189, 248);
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+}
+
+/* 歴代記録コンテナ */
+.ranking-container {
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(30, 41, 59, 0.7);
+    border-width: 1px;
+    border-color: rgb(56, 189, 248);
+    margin-bottom: 25px;
+}
+
+.ranking-title {
+    -unity-font-style: bold;
+    font-size: 24px;
+    color: rgb(103, 232, 249);
+    -unity-text-align: middle-center;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.ranking-entry {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom-width: 1px;
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.ranking-place {
+    -unity-font-style: bold;
+    font-size: 18px;
+    color: rgb(224, 242, 254);
+}
+
+.ranking-score {
+    font-size: 18px;
+    color: rgb(253, 224, 71);
+    -unity-font-style: bold;
 }
 
 /* サブタイトル */
@@ -24,13 +62,13 @@
     font-size: 50px;
     color: rgb(224, 242, 254);
     text-shadow: 0 0 8px rgb(56, 189, 248);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* 説明テキスト */
 .description-text {
     font-size: 20px;
-    color: rgb(203, 213, 225); /* スレートグレー */
+    color: rgb(203, 213, 225);
     margin-bottom: 15px;
 }
 
@@ -44,7 +82,7 @@
     font-size: 24px;
     -unity-font-style: bold;
     color: rgb(240, 249, 255);
-    background-color: rgba(14, 116, 144, 0.5); /* 半透明シアン */
+    background-color: rgba(14, 116, 144, 0.5);
     border-color: rgb(103, 232, 249);
     border-width: 2px;
     border-radius: 0;
@@ -54,7 +92,6 @@
     transition-duration: 0.2s;
 }
 
-/* ボタンホバー時 */
 .menu-button:hover {
     background-color: rgba(103, 232, 249, 0.8);
     color: rgb(17, 24, 39);
@@ -63,15 +100,84 @@
 
 /* サブパネル */
 .sub-panel {
-    width: 60%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 1200px; /* 横幅を少し広げる */
     padding: 40px;
-    background-color: rgba(30, 41, 59, 0.95); /* 半透明ダークスレート */
+    background-color: rgba(30, 41, 59, 0.95);
     border-radius: 10px;
 }
+
+/* --- ▼▼▼ ここからオプションパネル専用スタイル ▼▼▼ --- */
+
+/* オプションパネルのメインコンテナ */
+.options-main-container {
+    flex-grow: 1; /* 親要素の残りのスペースを埋める */
+    flex-direction: row;
+    width: 100%;
+    border-top-width: 1px;
+    border-color: rgba(56, 189, 248, 0.3);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* 左側ナビゲーション */
+.options-left-pane {
+    width: 25%;
+    min-width: 200px;
+    padding-right: 20px;
+    border-right-width: 1px;
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* ナビゲーションボタン */
+.nav-button {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(203, 213, 225);
+    background-color: transparent;
+    border-width: 0;
+    -unity-text-align: middle-left;
+    padding: 15px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+/* ナビゲーションボタンホバー時 */
+.nav-button:hover {
+    background-color: rgba(14, 116, 144, 0.5);
+    color: white;
+}
+
+/* 選択中のナビゲーションボタン */
+.nav-button.active {
+    background-color: rgb(56, 189, 248);
+    color: rgb(17, 24, 39);
+}
+
+/* 右側コンテンツエリア */
+.options-right-pane {
+    flex-grow: 1;
+    padding-left: 30px;
+}
+
+/* 各コンテンツのコンテナ */
+.options-content {
+    /* 表示・非表示はC#で制御するため、スタイルは不要 */
+}
+
+/* コンテンツタイトル */
+.options-content-title {
+    -unity-font-style: bold;
+    font-size: 32px;
+    color: rgb(224, 242, 254);
+    margin-bottom: 25px;
+}
+
+/* --- ▲▲▲ ここまで ▲▲▲ --- */
 
 /* 戻るボタン */
 .back-button {
     margin-top: 30px;
-    width: 200px;
+    width: 250px; /* テキストに合わせて少し広げる */
 }
